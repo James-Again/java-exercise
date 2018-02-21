@@ -14,8 +14,16 @@ public class Prime {
      * @return 给定的正整数是否是素数
      */
     public static boolean isPrime(int n) {
-        //TODO
-        return false;
+        boolean u = true;
+        for(int i=2;i<n;i++){
+            if(n%i == 0){
+                u=false;
+                break;
+            }
+        }
+
+
+        return u;
     }
 
     /**
@@ -25,7 +33,20 @@ public class Prime {
      * @return 1-n之间所有的素数的数量
      */
     public static int primeCount(int n) {
-        //TODO
-        return -1;
+        int t=0;
+        boolean u= true;
+        for(int j=2;j<=n;j++){
+            for(int i=2;i<j;i++){
+                if(j%i == 0){
+                    u=false;
+                    break;
+                }else{u=true;}
+            }
+            if(u==true){
+                t+=1;
+            }
+        }
+        return t;
     }
 }
+
