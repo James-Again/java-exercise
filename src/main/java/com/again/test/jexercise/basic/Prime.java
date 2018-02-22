@@ -15,9 +15,9 @@ public class Prime {
      */
     public static boolean isPrime(int n) {
         boolean u = true;
-        for(int i=2;i<n;i++){
-            if(n%i == 0){
-                u=false;
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                u = false;
                 break;
             }
         }
@@ -33,17 +33,19 @@ public class Prime {
      * @return 1-n之间所有的素数的数量
      */
     public static int primeCount(int n) {
-        int t=0;
-        boolean u= true;
-        for(int j=2;j<=n;j++){
-            for(int i=2;i<j;i++){
-                if(j%i == 0){
-                    u=false;
+        int t = 0;
+        boolean u = true;
+        for (int j = 2; j <= n; j++) {
+            for (int i = 2; i < j; i++) {
+                if (j % i == 0) {
+                    u = false;
                     break;
-                }else{u=true;}
+                } else {
+                    u = true;
+                }
             }
-            if(u==true){
-                t+=1;
+            if (u == true) {
+                t += 1;
             }
         }
         return t;
