@@ -11,11 +11,11 @@ package com.again.test.jexercise.basic;
  */
 public class Sum {
 
-    public static int sum(int n)
-    {
+    public static int sum(int n) {
         int s = 0;
-        for(int i = 0;i <= n;i++){
+        for (int i = 0; i <= n; i++) {
             s += i;
         }
         return s;
+    }
 }
