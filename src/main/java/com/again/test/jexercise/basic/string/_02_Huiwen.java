@@ -10,7 +10,12 @@ public class _02_Huiwen {
      * @return
      */
     public static boolean isHuiwen(String source) {
-        //TODO
-        return false;
+        char schar[]=source.toCharArray();
+        int lenchar=schar.length-1;
+        String source2="";
+        for (int i=lenchar;i>=0;i--){
+            source2+=schar[i];
+        }
+        if(source.substring(0,source.length()).equals(source2)){return true;}else {return false;}
     }
 }
