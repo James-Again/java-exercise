@@ -11,15 +11,13 @@ public class _02_Huiwen {
      * @return
      */
     public static boolean isHuiwen(String source) {
-        char sourceChar[] = source.toCharArray();
-        String sourceRe = "";
-        for (int i = sourceChar.length - 1; i >= 0; i--) {
-            sourceRe += sourceChar[i];
+        int j = 0;
+        for (int i = source.length() - 1; i >= 0; i--) {
+            if (source.charAt(j) != source.charAt(i)) {
+                return false;
+            }
+            j++;
         }
-        if (source.substring(0, source.length()).equals(sourceRe)) {
-            return true;
-        } else {
-            return false;
-        }
+        return true;
     }
 }
