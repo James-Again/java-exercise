@@ -6,16 +6,20 @@ package com.again.test.jexercise.basic.string;
 public class _02_Huiwen {
     /**
      * 判断是否是回文字符串
+     *
      * @param source
      * @return
      */
     public static boolean isHuiwen(String source) {
-        char schar[]=source.toCharArray();
-        int lenchar=schar.length-1;
-        String source2="";
-        for (int i=lenchar;i>=0;i--){
-            source2+=schar[i];
+        char sourceChar[] = source.toCharArray();
+        String sourceRe = "";
+        for (int i = sourceChar.length - 1; i >= 0; i--) {
+            sourceRe += sourceChar[i];
         }
-        if(source.substring(0,source.length()).equals(source2)){return true;}else {return false;}
+        if (source.substring(0, source.length()).equals(sourceRe)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

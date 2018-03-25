@@ -12,9 +12,9 @@ public class _01_CountIn {
      * @return
      */
     public static int countIn(String str, char target) {
-        int t=0;
-        for(int i=0;i<str.length();i++){
-            if(str.charAt(i)== target){
+        int t = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == target) {
                 t++;
             }
         }
